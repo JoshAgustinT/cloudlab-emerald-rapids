@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -eo pipefail
+# set -eo pipefail
 
 MOUNT_DIR=/opt/dramhit
 LOG_FILE=${HOME}/dramhit-setup.log
