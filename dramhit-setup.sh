@@ -29,13 +29,13 @@ clone_repos() {
 }
 
 build_all() {
-  pushd ${MOUNT_DIR}/dramhit
+  pushd ${MOUNT_DIR}/DRAMHiT
   nix-shell --command "mkdir -p build && cd build; cmake .. && make -j $(nproc)"
   popd
 }
 
 setup_system() {
-  sudo ${MOUNT_DIR}/dramhit/scripts/min-setup.sh
+  sudo ${MOUNT_DIR}/DRAMHiT/scripts/min-setup.sh
   sudo ln -sf $(which nix-store) /usr/local/bin/nix-store
 }
 
