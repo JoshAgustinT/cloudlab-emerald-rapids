@@ -6,12 +6,27 @@ NIX_DAEMON_VARS="/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh"
 USER=$(id -u -n)
 GROUP=$(id -g -n)
 
-prepare_machine() {
+
+is_mounted() {
+  mount | grep -qE "/dev/nvme1n1 on ${MOUNT_DIR} "
+}
+
+mount_partition() {
   sudo mkfs.ext4 -Fq /dev/nvme1n1
   sudo mkdir -p ${MOUNT_DIR}
   sudo mount -t ext4 /dev/nvme1n1 ${MOUNT_DIR}
   sudo chown -R ${USER}:${GROUP} ${MOUNT_DIR}
+}
 
+mount_machine(){
+  if is_mounted; then
+    return
+  fi
+  
+  mount_partition
+}
+
+setup_nix() {
   sudo mkdir -p /nix
   sudo cp -r /nix ${MOUNT_DIR}
   sudo mount --bind ${MOUNT_DIR}/nix /nix
@@ -39,7 +54,8 @@ setup_system() {
   sudo ln -sf $(which nix-store) /usr/local/bin/nix-store
 }
 
-prepare_machine
+mount_machine
+setup_nix
 clone_repos
 build_all
 setup_system
