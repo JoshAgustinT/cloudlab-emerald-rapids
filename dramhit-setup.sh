@@ -24,7 +24,7 @@ prepare_machine() {
 clone_repos() {
   mkdir -p ${MOUNT_DIR}
   pushd ${MOUNT_DIR}
-  git clone https://github.com/mars-research/dramhit --recursive
+  git clone https://github.com/mars-research/DRAMHiT.git --recursive
   popd
 }
 
