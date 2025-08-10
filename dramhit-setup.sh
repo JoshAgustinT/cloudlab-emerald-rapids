@@ -1,7 +1,7 @@
 #!/bin/bash
 set -eo pipefail
 
-MOUNT_DIR=/opt/dramhit
+MOUNT_DIR=/opt
 NIX_DAEMON_VARS="/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh"
 USER=$(id -u -n)
 GROUP=$(id -g -n)
