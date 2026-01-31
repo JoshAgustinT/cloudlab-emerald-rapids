@@ -39,7 +39,8 @@ setup_nix() {
 clone_repos() {
   mkdir -p ${MOUNT_DIR}
   pushd ${MOUNT_DIR}
-  git clone https://github.com/mars-research/DRAMHiT.git --recursive
+  # git clone https://github.com/mars-research/DRAMHiT.git --recursive
+  git clone https://github.com/JoshAgustinT/dramhit-fork.git --recursive
   popd
 }
 
