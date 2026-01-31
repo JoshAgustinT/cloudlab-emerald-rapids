@@ -1,9 +1,8 @@
 """
-DRAMhit
+Main things to change in: profile.py, dramhit-setup.sh
 
-
-Instructions:
-Nothing to do here, look into .sh if you would like
+profile.py contains: machine used, os version used
+dramhit-setup.sh contains: machine startup script
 """	  
 # Import the Portal object.
 import geni.portal as portal
@@ -17,7 +16,12 @@ pc = portal.Context()
 request = pc.makeRequestRSpec()
 
 node_0 = request.RawPC('node-0')
-node_0.hardware_type = 'c6620'
+
+# 128 thread dual socket: Intel Xeon Gold 6548Y+
+node_0.hardware_type = 'd760'
+# 1 socket emmerald machine 56 threads
+# node_0.hardware_type = 'c6620'
+
 node_0.disk_image = 'urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU24-64-STD'
 # Install and execute a script that is contained in the repository.
 node_0.addService(pg.Execute(shell="sh", command="/local/repository/dramhit-top.sh"))
