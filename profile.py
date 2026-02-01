@@ -17,8 +17,12 @@ request = pc.makeRequestRSpec()
 
 node_0 = request.RawPC('node-0')
 
+
+# AMD EPYC 9354P
+node_0.hardware_type = 'r6615'
+
 # Intel Xeon 8360Y 
-node_0.hardware_type = 'r650'
+# node_0.hardware_type = 'r650'
 
 # Intel Xeon Gold 6142 Processor
 # node_0.hardware_type = 'c6420'
