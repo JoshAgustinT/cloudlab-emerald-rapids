@@ -21,11 +21,11 @@ node_0 = request.RawPC('node-0')
 # AMD EPYC 9354P
 # node_0.hardware_type = 'r6615'
 
-# Intel Xeon 8360Y 
-node_0.hardware_type = 'r650'
+# Intel Xeon 8360Y ice lake
+# node_0.hardware_type = 'r650'
 
-# Intel Xeon Gold 6142 Processor
-# node_0.hardware_type = 'c6420'
+# Intel Xeon Gold 6142 Processor , skylake
+node_0.hardware_type = 'c6420'
 
 # 128 thread dual socket: Intel Xeon Gold 6548Y+
 # node_0.hardware_type = 'd760'
