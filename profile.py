@@ -40,7 +40,7 @@ node_0.hardware_type = 'm400'
 
 node_0.disk_image = 'urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU24-64-STD'
 if node_0.hardware_type == 'm400': 
-   node_0.disk_image = 'urn:publicid:IDN+clemson.cloudlab.us+image+redshift-PG0:dramhitNix'
+   node_0.disk_image = 'urn:publicid:IDN+utah.cloudlab.us+image+emulab-ops:UBUNTU22-64-ARM'
 
 # Install and execute a script that is contained in the repository.
 node_0.addService(pg.Execute(shell="sh", command="/local/repository/dramhit-top.sh"))
