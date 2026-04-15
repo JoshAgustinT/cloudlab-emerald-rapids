@@ -31,9 +31,9 @@ node_0 = request.RawPC('node-0')
 # node_0.hardware_type = 'c6420'
 
 # 128 thread dual socket: Intel Xeon Gold 6548Y+
-node_0.hardware_type = 'd760'
+# node_0.hardware_type = 'd760'
 # 1 socket emmerald machine 56 threads
-# node_0.hardware_type = 'c6620'
+node_0.hardware_type = 'c6620'
 
 # ARM X-Gene 1
 # node_0.hardware_type = 'm400'
