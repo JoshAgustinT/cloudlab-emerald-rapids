@@ -27,7 +27,7 @@ node_0 = request.RawPC('node-0')
 # Intel Xeon 8360Y ice lake
 # node_0.hardware_type = 'r650'
 
-# ice lake dual socket  Intel® Xeon® Gold 6326 Processor, 16 cores, 32 threads. 64 threads total
+# ice lake dual socket  Intel Xeon Gold 6326 Processor, 16 cores, 32 threads. 64 threads total
 node_0.hardware_type = 'd750'
 
 # Intel Xeon Gold 6142 Processor , skylake
