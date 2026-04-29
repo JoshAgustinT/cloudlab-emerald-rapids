@@ -21,8 +21,8 @@ node_0 = request.RawPC('node-0')
 # node_0.hardware_type = 'c6525-25g'
 
 # AMD EPYC 9354P zen4
-# node_0.hardware_type = 'r6615'
-node_0.hardware_type = 'd7615' # 1 numa node config
+node_0.hardware_type = 'r6615'
+# node_0.hardware_type = 'd7615' # 1 numa node config
 
 # Intel Xeon 8360Y ice lake
 # node_0.hardware_type = 'r650'
