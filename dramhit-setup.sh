@@ -34,11 +34,8 @@ setup_nix() {
   sh <(curl -L https://nixos.org/nix/install) --daemon
   source ${NIX_DAEMON_VARS}
   nix-channel --list
-
-  mkdir -p ~/.config/nix
-  cat > ~/.config/nix/nix.conf <<EOF
-  experimental-features = nix-command flakes
-  EOF
+  
+  mkdir -p ~/.config/nix && echo "experimental-features = nix-command flakes" > ~/.config/nix/nix.conf
 }
 
 clone_repos() {
